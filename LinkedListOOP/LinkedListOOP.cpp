@@ -24,7 +24,7 @@ public:
 
 List::List()
 {
-	START = NULL;
+	START = NULL; 
 }
 void List::addNode()/*Menambahkan sebuah Node kedalam list*/
 {
