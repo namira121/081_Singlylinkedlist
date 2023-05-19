@@ -21,3 +21,29 @@ public:
 	bool delNode(int element);
 	void traverse();
 };
+
+List::List()
+{
+	START = NULL;
+}
+void List::addNode()/*Menambahkan sebuah Node kedalam list*/
+{
+	int nim;
+	char nm[20];
+	cout << "\nMasukkan Nomor Mahasiswa: ";
+	cin >> nim;
+	cout << "\nMasukkan Nama: ";
+	cin >> nm;
+
+	Node* nodeBaru = new Node;
+	nodeBaru->noMhs = nim;
+	strcpy_s(nodeBaru->nama, nm);
+
+	if (START == NULL || nim <= START->noMhs)
+	{
+		if ((START != NULL) && (nim == START->noMhs))
+		{
+
+		}
+	}
+}
