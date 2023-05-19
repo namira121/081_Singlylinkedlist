@@ -43,7 +43,8 @@ void List::addNode()/*Menambahkan sebuah Node kedalam list*/
 	{
 		if ((START != NULL) && (nim == START->noMhs))
 		{
-
+			cout << "\nDuplikasi moMhs tidak diijinkan\n";
+			return;
 		}
 	}
 }
