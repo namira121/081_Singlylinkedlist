@@ -46,5 +46,45 @@ void List::addNode()/*Menambahkan sebuah Node kedalam list*/
 			cout << "\nDuplikasi moMhs tidak diijinkan\n";
 			return;
 		}
+		nodeBaru->next = START;
+		START = nodeBaru;
+		return;
 	}
+	Node* previous, * current;
+
+	current = START;
+	previous = START;
+
+
+	while ((current != NULL) && (nim >= current->noMhs))
+	{
+		if (nim == current->noMhs)
+		{
+			cout << "\nDuplikasi noMhs tidak diijinkan\n";
+			return;
+		}
+		previous = current;
+		current = current->next;
+
+	}
+	/*Jika loop diatas dieksekusi, previous dan current akan menempati posisi dimana*/
+	nodeBaru->next = current;
+	previous->next = nodeBaru;
+}
+
+bool List::listEmpty()
+{
+	if (START == NULL)
+		return true;
+	else
+		return false;
+}
+bool List::delNode(int nim)/*Menghapus node dari dalam list*/
+{
+	Node* current, * previous;
+	if (Search(nim, &previous, &current) == false)
+		return false;
+	previous->next = current->next;
+	if (current ==START)
+
 }
